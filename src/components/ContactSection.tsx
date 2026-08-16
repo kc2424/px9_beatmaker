@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function ContactSection() {
   const [inquiryStatus, setInquiryStatus] = useState<string | null>(null);
@@ -15,10 +16,24 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full py-24 md:py-36 bg-[#0b0b0b] border-t border-white/[0.08]"
+      className="relative w-full py-28 md:py-40 bg-[#0b0b0b] border-t border-white/[0.08] overflow-hidden"
       aria-label="Contact and Licensing"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      {/* Studio Rack Ambient Background (10-studio-rack.jpg) */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <Image
+          src="/images/10-studio-rack.jpg"
+          alt="Vintage analog audio mastering gear and glowing VU meters in dark studio"
+          fill
+          sizes="100vw"
+          className="object-cover object-right opacity-30"
+        />
+        {/* Soft edge darkening to void black */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-[#0b0b0b]/75 to-[#0b0b0b]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0b] via-[#0b0b0b]/80 to-transparent" />
+      </div>
+
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="max-w-3xl flex flex-col gap-6">
           {/* Eyebrow */}
           <div className="flex items-center gap-2">
@@ -54,7 +69,7 @@ export default function ContactSection() {
 
           {/* Interactive feedback notice (if clicked) */}
           {inquiryStatus && (
-            <div className="mt-4 p-5 rounded-[10px] bg-[#272a2a] border border-[#cc6437]/40 text-white/95 text-base font-body animate-in fade-in duration-200 tracking-wide">
+            <div className="mt-4 p-5 rounded-[10px] bg-[#272a2a]/95 border border-[#cc6437]/40 text-white/95 text-base font-body animate-in fade-in duration-200 tracking-wide">
               <p className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#cc6437]" />
                 {inquiryStatus}

@@ -9,6 +9,7 @@ export default function Header() {
   const navItems = [
     { label: "ABOUT", href: "#about" },
     { label: "CONTENT", href: "#content" },
+    { label: "LIVE SYSTEM", href: "#live" },
     { label: "SELECTED WORK", href: "#works" },
     { label: "CONTACT", href: "#contact" },
   ];
@@ -31,7 +32,7 @@ export default function Header() {
           {/* Center Brand */}
           <a
             href="#"
-            className="font-brand text-2xl md:text-3xl tracking-widest text-white hover:text-[#cc6437] transition-colors"
+            className="font-brand text-2xl md:text-3xl tracking-widest text-white hover:text-[#cc6437] transition-colors uppercase"
           >
             PX-9
           </a>

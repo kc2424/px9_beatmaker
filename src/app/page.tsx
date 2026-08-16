@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContentGrid from "@/components/ContentGrid";
+import LiveSection from "@/components/LiveSection";
 import SelectedWorkSection from "@/components/SelectedWorkSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -28,17 +29,20 @@ export default function Home() {
         {/* 5. Asymmetric Content Grid (3 Cards) */}
         <ContentGrid />
 
-        {/* 6. Selected Work (Bone Inversion Section) */}
+        {/* 6. Hardware Live Performance Sound System */}
+        <LiveSection />
+
+        {/* 7. Selected Work (Bone Inversion Section) */}
         <SelectedWorkSection />
 
-        {/* 7. Commissions & Contact */}
+        {/* 8. Commissions & Contact (Studio Rack Ambient) */}
         <ContactSection />
       </main>
 
-      {/* 8. Minimal Footer */}
+      {/* 9. Minimal Footer */}
       <Footer />
 
-      {/* 9. Mobile Bottom Thumb-zone CTA */}
+      {/* 10. Mobile Bottom Thumb-zone CTA */}
       <MobileCtaBar />
     </div>
   );

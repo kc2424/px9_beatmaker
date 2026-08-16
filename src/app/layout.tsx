@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Modak, New_Tegomin, Roboto_Mono } from "next/font/google";
+import { Alegreya, New_Tegomin, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const modak = Modak({
+const alegreya = Alegreya({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-modak",
+  weight: ["400", "500", "700"],
+  variable: "--font-alegreya",
   display: "swap",
 });
 
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${modak.variable} ${newTegomin.variable} ${robotoMono.variable}`}
+      className={`${alegreya.variable} ${newTegomin.variable} ${robotoMono.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,7 +51,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Modak&family=New+Tegomin&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=New+Tegomin&display=swap"
           rel="stylesheet"
         />
       </head>

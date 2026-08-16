@@ -28,13 +28,13 @@ export default function ContactSection() {
             </span>
           </div>
 
-          {/* Heading in Modak */}
-          <h2 className="font-brand text-5xl md:text-7xl text-white tracking-wide">
+          {/* Heading in Alegreya */}
+          <h2 className="font-brand text-4xl md:text-6xl text-white tracking-wider uppercase">
             WORK WITH PX-9
           </h2>
 
           {/* Body in New Tegomin */}
-          <p className="font-body text-lg md:text-2xl text-white/85 leading-relaxed max-w-2xl tracking-wide">
+          <p className="font-body text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl tracking-wide">
             シンクライセンス、カスタムスコア制作、コラボレーションの相談を受け付けている。
           </p>
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
             <a
               href="#contact"
               onClick={handleCtaClick}
-              className="ghost-pill-btn text-base tracking-wider px-8 py-3.5 border-white/40 hover:border-[#cc6437]"
+              className="ghost-pill-btn text-sm tracking-widest px-8 py-3.5 border-white/40 hover:border-[#cc6437]"
             >
               GET IN TOUCH
             </a>

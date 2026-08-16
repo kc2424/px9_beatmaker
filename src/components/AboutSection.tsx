@@ -52,7 +52,7 @@ export default function AboutSection() {
       className="relative w-full py-24 md:py-36 bg-[#0b0b0b] border-t border-white/[0.06] overflow-hidden"
       aria-label="About PX-9"
     >
-      {/* CRT Scanline Ambient Background (08-crt-scanline.png) */}
+      {/* CRT Scanline Ambient Background */}
       <div
         ref={crtRef}
         className="absolute inset-0 pointer-events-none opacity-25 select-none z-0"
@@ -77,8 +77,8 @@ export default function AboutSection() {
             </span>
           </div>
 
-          {/* Section Heading in Modak */}
-          <h2 className="font-brand text-4xl md:text-6xl text-white tracking-wide mb-8 leading-tight">
+          {/* Section Heading in Alegreya */}
+          <h2 className="font-brand text-3xl md:text-5xl text-white tracking-wider mb-8 leading-tight uppercase">
             RESTRICTION AS AN ARTISTIC DECISION
           </h2>
 
@@ -100,7 +100,7 @@ export default function AboutSection() {
               <span className="font-mono text-[11px] text-[#cc6437] uppercase tracking-wider">
                 CH 01
               </span>
-              <span className="font-brand text-base md:text-lg text-white/90 tracking-wide">
+              <span className="font-brand text-base md:text-lg text-white/90 tracking-wider uppercase">
                 SQUARE WAVE
               </span>
             </div>
@@ -108,7 +108,7 @@ export default function AboutSection() {
               <span className="font-mono text-[11px] text-[#cc6437] uppercase tracking-wider">
                 CH 02
               </span>
-              <span className="font-brand text-base md:text-lg text-white/90 tracking-wide">
+              <span className="font-brand text-base md:text-lg text-white/90 tracking-wider uppercase">
                 TRIANGLE WAVE
               </span>
             </div>
@@ -116,7 +116,7 @@ export default function AboutSection() {
               <span className="font-mono text-[11px] text-[#cc6437] uppercase tracking-wider">
                 CH 03
               </span>
-              <span className="font-brand text-base md:text-lg text-white/90 tracking-wide">
+              <span className="font-brand text-base md:text-lg text-white/90 tracking-wider uppercase">
                 NOISE
               </span>
             </div>

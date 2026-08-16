@@ -50,7 +50,7 @@ function ContentCard({
 
       {/* Bottom Content Row */}
       <div className="relative z-10 mt-auto pt-8 flex flex-col gap-3">
-        <h3 className="font-brand text-3xl md:text-4xl text-white tracking-wide leading-tight">
+        <h3 className="font-brand text-2xl md:text-3xl text-white tracking-wider leading-tight uppercase">
           {heading}
         </h3>
         <p className="font-body text-base md:text-lg text-white/85 leading-relaxed max-w-xl whitespace-pre-line tracking-wide">
@@ -106,7 +106,7 @@ export default function ContentGrid() {
                 DISCIPLINE & OUTPUT
               </span>
             </div>
-            <h2 className="font-brand text-4xl md:text-6xl text-white tracking-wide">
+            <h2 className="font-brand text-3xl md:text-5xl text-white tracking-wider uppercase">
               CONTENT PILLARS
             </h2>
           </div>
@@ -120,7 +120,7 @@ export default function ContentGrid() {
           ref={cardsContainerRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {/* Card 1: 2-column span on desktop, with 07-handheld-synth.png */}
+          {/* Card 1: 2-column span on desktop */}
           <ContentCard
             badge="01"
             category="PRODUCTION PROCESS"
@@ -131,7 +131,7 @@ export default function ContentGrid() {
             className="md:col-span-2 lg:col-span-2"
           />
 
-          {/* Card 2: 1-column span on desktop, with 08-crt-scanline.png */}
+          {/* Card 2: 1-column span on desktop */}
           <ContentCard
             badge="02"
             category="CHIP ARCHITECTURE"
@@ -142,7 +142,7 @@ export default function ContentGrid() {
             className="md:col-span-1 lg:col-span-1"
           />
 
-          {/* Card 3: 1-column span on desktop, with 04-card-freebeats.png */}
+          {/* Card 3: 1-column span on desktop */}
           <ContentCard
             badge="03"
             category="FREE RELEASES"

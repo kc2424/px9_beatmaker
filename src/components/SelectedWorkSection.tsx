@@ -85,7 +85,7 @@ export default function SelectedWorkSection() {
                 SELECTED WORK
               </span>
             </div>
-            <h2 className="font-brand text-4xl md:text-6xl text-[#0b0b0b] tracking-wide">
+            <h2 className="font-brand text-3xl md:text-5xl text-[#0b0b0b] tracking-wider uppercase">
               AUTONOMOUS ARCHIVE
             </h2>
           </div>
@@ -111,9 +111,9 @@ export default function SelectedWorkSection() {
                 </span>
               </div>
 
-              {/* Title in Modak */}
+              {/* Title in Alegreya */}
               <div className="md:col-span-5">
-                <h3 className="font-brand text-2xl md:text-3xl text-[#0b0b0b] tracking-wide group-hover:text-[#cc6437] transition-colors">
+                <h3 className="font-brand text-xl md:text-2xl text-[#0b0b0b] tracking-wide uppercase group-hover:text-[#cc6437] transition-colors">
                   {work.title}
                 </h3>
               </div>

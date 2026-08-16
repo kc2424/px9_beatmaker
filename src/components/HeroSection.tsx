@@ -71,13 +71,13 @@ export default function HeroSection() {
             </span>
           </div>
 
-          {/* Main Wordmark H1 with Modak */}
-          <h1 className="font-brand text-7xl md:text-9xl text-white tracking-wider leading-none select-none">
+          {/* Main Wordmark H1 with Alegreya */}
+          <h1 className="font-brand text-7xl md:text-9xl text-white tracking-wider leading-none select-none uppercase">
             PX-9
           </h1>
 
-          {/* Philosophy Statement in Modak */}
-          <p className="font-brand text-xl md:text-3xl text-white/90 tracking-wide leading-snug max-w-xl border-l-2 border-[#cc6437] pl-4">
+          {/* Philosophy Statement in Alegreya */}
+          <p className="font-brand text-xl md:text-3xl text-white/90 tracking-wider leading-snug max-w-xl border-l border-[#cc6437] pl-4 uppercase">
             8BIT IS NOT A LIMITATION. IT&apos;S A CHOICE.
           </p>
 

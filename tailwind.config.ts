@@ -30,9 +30,9 @@ const config: Config = {
         ash: "#cecece",
       },
       fontFamily: {
-        brand: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
-        display: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
-        heading: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
+        brand: ["var(--font-alegreya)", "serif", "ui-serif"],
+        display: ["var(--font-alegreya)", "serif", "ui-serif"],
+        heading: ["var(--font-alegreya)", "serif", "ui-serif"],
         body: ["var(--font-new-tegomin)", "serif", "ui-serif"],
         japanese: ["var(--font-new-tegomin)", "serif", "ui-serif"],
         mono: ["var(--font-roboto-mono)", "ui-monospace", "monospace"],

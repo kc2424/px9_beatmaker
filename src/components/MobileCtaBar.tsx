@@ -9,7 +9,7 @@ export default function MobileCtaBar() {
       aria-label="Mobile Action Bar"
     >
       <div className="flex items-center justify-between gap-3 max-w-sm mx-auto">
-        <span className="font-brand text-base tracking-wider uppercase text-white/80 pl-2">
+        <span className="font-brand text-sm tracking-wider uppercase text-white/80 pl-2">
           PX-9 // COMMISSIONS
         </span>
         <a

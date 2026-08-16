@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
+import os from "os";
 
 async function main() {
   const videosDir = path.resolve("./videos");
@@ -102,7 +103,7 @@ async function main() {
   console.log(`Raw video saved to: ${savedVideoPath}`);
 
   const outputMp4 = path.resolve("./px9_x_demo.mp4");
-  const downloadsMp4 = "C:\\Users\\0124o\\Downloads\\px9_x_demo.mp4";
+  const downloadsMp4 = path.join(os.homedir(), "Downloads", "px9_demo.mp4");
 
   console.log("Converting WebM to X-optimized H.264 MP4...");
   execSync(

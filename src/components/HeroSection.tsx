@@ -62,15 +62,6 @@ export default function HeroSection() {
         className="relative z-20 max-w-[1400px] w-full mx-auto px-6 md:px-12 pb-16 md:pb-24 pt-32"
       >
         <div className="max-w-2xl flex flex-col gap-6">
-          {/* Tagline Badge */}
-          <div className="flex items-center gap-3">
-            <span className="badge-pill">CHIPTUNE PRODUCER</span>
-            <span className="w-12 h-[1px] bg-[#484848]" />
-            <span className="font-mono text-xs text-[#cc6437] uppercase tracking-widest">
-              DISCIPLINE & CHOICE
-            </span>
-          </div>
-
           {/* Main Wordmark H1 with Alegreya */}
           <h1 className="font-brand text-7xl md:text-9xl text-white tracking-wider leading-none select-none uppercase">
             PX-9

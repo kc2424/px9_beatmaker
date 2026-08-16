@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --color-ember-rust: #cc6437;
+  --color-void-black: #0b0b0b;
+  --color-charcoal-surface: #272a2a;
+  --color-bone: #edebe7;
+  --color-bone-darker: #dfddd9;
+  --color-pure-white: #ffffff;
+  --color-abyss: #050505;
+  --color-steel: #484848;
+  --color-ash: #cecece;
+
+  /* Radius */
+  --radius-pill: 1440px;
+  --radius-card: 10px;
+  --radius-news-bar-button: 0px;
+
+  /* Layout */
+  --page-max-width: 1400px;
+  --section-gap: 80px;
+  --card-padding: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400 !important; /* Strict 400 weight across entire site */
+  box-shadow: none !important; /* Strict prohibition of box-shadows / glows */
+  text-shadow: none !important;
+  filter: none;
+}
+
+html {
+  background-color: var(--color-void-black);
+  color: var(--color-pure-white);
+  font-size: 16px; /* Base 16px preserved */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-void-black);
+  color: var(--color-pure-white);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #cc6437;
+  color: #ffffff;
+}
+
+/* Strict keyboard focus accessibility */
+:focus-visible {
+  outline: 1px solid var(--color-ember-rust) !important;
+  outline-offset: 3px !important;
+}
+
+/* Hairline border utilities */
+.border-hairline-white {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.border-hairline-steel {
+  border: 1px solid var(--color-steel);
+}
+
+.border-hairline-ash {
+  border: 1px solid var(--color-ash);
+}
+
+.border-hairline-rust {
+  border: 1px solid var(--color-ember-rust);
+}
+
+.border-hairline-bone-dark {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Ghost Pill Button */
+.ghost-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-pill);
+  color: var(--color-pure-white);
+  font-family: var(--font-oswald), ui-sans-serif, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 24px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ghost-pill-btn:hover {
+  border-color: var(--color-ember-rust);
+  color: var(--color-pure-white);
+}
+
+/* Inversion Button for Bone Section */
+.ghost-pill-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(11, 11, 11, 0.4);
+  border-radius: var(--radius-pill);
+  color: var(--color-void-black);
+  font-family: var(--font-oswald), ui-sans-serif, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 24px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ghost-pill-btn-dark:hover {
+  border-color: var(--color-ember-rust);
+  color: var(--color-void-black);
+}
+
+/* Badge Pill */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--color-ash);
+  border-radius: var(--radius-pill);
+  color: var(--color-pure-white);
+  font-family: var(--font-roboto-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  text-transform: uppercase;
+}
+
+/* System Card */
+.system-card {
+  background-color: var(--color-charcoal-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* News Ticker Bar */
+.news-ticker-bar {
+  background-color: var(--color-abyss);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-roboto-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

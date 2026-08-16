@@ -28,13 +28,13 @@ export default function ContactSection() {
             </span>
           </div>
 
-          {/* Heading */}
-          <h2 className="font-brand text-4xl md:text-6xl text-white uppercase tracking-tight">
+          {/* Heading in Modak */}
+          <h2 className="font-brand text-5xl md:text-7xl text-white tracking-wide">
             WORK WITH PX-9
           </h2>
 
-          {/* Body */}
-          <p className="font-body text-base md:text-xl text-white/80 leading-relaxed max-w-2xl">
+          {/* Body in New Tegomin */}
+          <p className="font-body text-lg md:text-2xl text-white/85 leading-relaxed max-w-2xl tracking-wide">
             シンクライセンス、カスタムスコア制作、コラボレーションの相談を受け付けている。
           </p>
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
             <a
               href="#contact"
               onClick={handleCtaClick}
-              className="ghost-pill-btn text-sm tracking-widest px-8 py-3.5 border-white/40 hover:border-[#cc6437]"
+              className="ghost-pill-btn text-base tracking-wider px-8 py-3.5 border-white/40 hover:border-[#cc6437]"
             >
               GET IN TOUCH
             </a>
@@ -54,9 +54,9 @@ export default function ContactSection() {
 
           {/* Interactive feedback notice (if clicked) */}
           {inquiryStatus && (
-            <div className="mt-4 p-4 rounded-[10px] bg-[#272a2a] border border-[#cc6437]/40 text-white/90 text-sm font-body animate-in fade-in duration-200">
-              <p className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#cc6437]" />
+            <div className="mt-4 p-5 rounded-[10px] bg-[#272a2a] border border-[#cc6437]/40 text-white/95 text-base font-body animate-in fade-in duration-200 tracking-wide">
+              <p className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-[#cc6437]" />
                 {inquiryStatus}
               </p>
             </div>

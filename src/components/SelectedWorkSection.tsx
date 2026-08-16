@@ -85,7 +85,7 @@ export default function SelectedWorkSection() {
                 SELECTED WORK
               </span>
             </div>
-            <h2 className="font-brand text-3xl md:text-5xl text-[#0b0b0b] uppercase tracking-tight">
+            <h2 className="font-brand text-4xl md:text-6xl text-[#0b0b0b] tracking-wide">
               AUTONOMOUS ARCHIVE
             </h2>
           </div>
@@ -111,16 +111,16 @@ export default function SelectedWorkSection() {
                 </span>
               </div>
 
-              {/* Title */}
+              {/* Title in Modak */}
               <div className="md:col-span-5">
-                <h3 className="font-brand text-xl md:text-2xl text-[#0b0b0b] uppercase tracking-wide group-hover:text-[#cc6437] transition-colors">
+                <h3 className="font-brand text-2xl md:text-3xl text-[#0b0b0b] tracking-wide group-hover:text-[#cc6437] transition-colors">
                   {work.title}
                 </h3>
               </div>
 
-              {/* Description */}
+              {/* Description in New Tegomin */}
               <div className="md:col-span-4">
-                <p className="font-body text-base text-[#0b0b0b]/80 leading-relaxed">
+                <p className="font-body text-base md:text-lg text-[#0b0b0b]/80 leading-relaxed tracking-wide">
                   {work.description}
                 </p>
               </div>

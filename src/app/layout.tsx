@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Oswald, Inter, Roboto_Mono } from "next/font/google";
+import { Modak, New_Tegomin, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const oswald = Oswald({
+const modak = Modak({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-oswald",
+  variable: "--font-modak",
   display: "swap",
 });
 
-const inter = Inter({
+const newTegomin = New_Tegomin({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-inter",
+  variable: "--font-new-tegomin",
   display: "swap",
 });
 
@@ -41,8 +41,20 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${oswald.variable} ${inter.variable} ${robotoMono.variable}`}
+      className={`${modak.variable} ${newTegomin.variable} ${robotoMono.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Modak&family=New+Tegomin&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="antialiased selection:bg-[#cc6437] selection:text-white bg-[#0b0b0b] text-[#ffffff] min-h-screen">
         {children}
       </body>

@@ -9,12 +9,12 @@ export default function MobileCtaBar() {
       aria-label="Mobile Action Bar"
     >
       <div className="flex items-center justify-between gap-3 max-w-sm mx-auto">
-        <span className="font-brand text-sm tracking-wider uppercase text-white/70 pl-2">
+        <span className="font-brand text-base tracking-wider uppercase text-white/80 pl-2">
           PX-9 // COMMISSIONS
         </span>
         <a
           href="#contact"
-          className="ghost-pill-btn text-xs tracking-widest py-3 px-6 min-h-[48px] border-[#cc6437] text-white flex items-center justify-center"
+          className="ghost-pill-btn text-xs tracking-wider py-3 px-6 min-h-[48px] border-[#cc6437] text-white flex items-center justify-center"
         >
           CONTACT
         </a>

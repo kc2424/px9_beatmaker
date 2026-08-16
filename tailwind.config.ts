@@ -30,9 +30,11 @@ const config: Config = {
         ash: "#cecece",
       },
       fontFamily: {
-        brand: ["var(--font-oswald)", "ui-sans-serif", "sans-serif"],
-        heading: ["var(--font-oswald)", "ui-sans-serif", "sans-serif"],
-        body: ["var(--font-inter)", "ui-sans-serif", "sans-serif"],
+        brand: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
+        display: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
+        heading: ["var(--font-modak)", "cursive", "ui-sans-serif", "sans-serif"],
+        body: ["var(--font-new-tegomin)", "serif", "ui-serif"],
+        japanese: ["var(--font-new-tegomin)", "serif", "ui-serif"],
         mono: ["var(--font-roboto-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {

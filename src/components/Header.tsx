@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { X } from "lucide-react";
 
 export default function Header() {
@@ -29,10 +28,10 @@ export default function Header() {
             MENU
           </button>
 
-          {/* Center Subtle Brand indicator */}
+          {/* Center Brand */}
           <a
             href="#"
-            className="font-brand text-xl tracking-widest text-white/90 hover:text-white uppercase transition-colors"
+            className="font-brand text-2xl md:text-3xl tracking-wider text-white hover:text-[#cc6437] transition-colors"
           >
             PX-9
           </a>
@@ -77,7 +76,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="group flex items-baseline gap-4 text-3xl md:text-5xl font-brand tracking-wider text-white/70 hover:text-white transition-colors"
+                className="group flex items-baseline gap-4 text-4xl md:text-6xl font-brand tracking-wider text-white/70 hover:text-white transition-colors"
               >
                 <span className="font-mono text-xs md:text-sm text-[#cc6437]">
                   0{idx + 1}

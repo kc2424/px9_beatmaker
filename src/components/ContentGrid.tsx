@@ -35,25 +35,25 @@ function ContentCard({
           alt={imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover object-center opacity-30 group-hover:opacity-40 transition-opacity duration-500"
+          className="object-cover object-center opacity-35 group-hover:opacity-45 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-[#272a2a]/80" />
+        <div className="absolute inset-0 bg-[#272a2a]/75" />
       </div>
 
       {/* Top Header Row */}
       <div className="relative z-10 flex items-center justify-between">
         <span className="badge-pill">{badge}</span>
-        <span className="font-mono text-[11px] uppercase tracking-widest text-white/50 group-hover:text-[#cc6437] transition-colors">
+        <span className="font-mono text-[11px] uppercase tracking-widest text-white/60 group-hover:text-[#cc6437] transition-colors">
           [ {category} ]
         </span>
       </div>
 
       {/* Bottom Content Row */}
-      <div className="relative z-10 mt-auto pt-8 flex flex-col gap-4">
-        <h3 className="font-brand text-2xl md:text-3xl text-white uppercase tracking-tight leading-tight">
+      <div className="relative z-10 mt-auto pt-8 flex flex-col gap-3">
+        <h3 className="font-brand text-3xl md:text-4xl text-white tracking-wide leading-tight">
           {heading}
         </h3>
-        <p className="font-body text-base text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
+        <p className="font-body text-base md:text-lg text-white/85 leading-relaxed max-w-xl whitespace-pre-line tracking-wide">
           {body}
         </p>
       </div>
@@ -106,7 +106,7 @@ export default function ContentGrid() {
                 DISCIPLINE & OUTPUT
               </span>
             </div>
-            <h2 className="font-brand text-3xl md:text-5xl text-white uppercase tracking-tight">
+            <h2 className="font-brand text-4xl md:text-6xl text-white tracking-wide">
               CONTENT PILLARS
             </h2>
           </div>
@@ -120,29 +120,29 @@ export default function ContentGrid() {
           ref={cardsContainerRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {/* Card 1: 2-column span on desktop (lg:col-span-2), full width on tablet (md:col-span-2) */}
+          {/* Card 1: 2-column span on desktop, with 07-handheld-synth.png */}
           <ContentCard
             badge="01"
             category="PRODUCTION PROCESS"
             heading="HOW A TRACK IS BUILT"
             body="着想からミックスダウンまで、1本の曲ができる過程をそのまま見せる。音源選びの理由、テンポの決め方、制約の中でどこを削り、どこを残すか。"
-            imageSrc="/images/02-card-process.png"
-            imageAlt="Synthesizer patch cables and mixing knobs macro texture"
+            imageSrc="/images/07-handheld-synth.png"
+            imageAlt="Retro 8-bit chunky handheld synthesizer and controller in ember rust"
             className="md:col-span-2 lg:col-span-2"
           />
 
-          {/* Card 2: 1-column span on desktop (lg:col-span-1), 1 col on tablet (md:col-span-1) */}
+          {/* Card 2: 1-column span on desktop, with 08-crt-scanline.png */}
           <ContentCard
             badge="02"
             category="CHIP ARCHITECTURE"
             heading="INSIDE THE CHIP"
             body="レトロゲーム音源がどう鳴っているかを解剖する。矩形波・三角波・ノイズ、それぞれのチャンネルが何を担っていたかを、実際の音と波形で解説する。"
-            imageSrc="/images/03-card-teardown.png"
-            imageAlt="Macro vintage circuit board PCB trace texture"
+            imageSrc="/images/08-crt-scanline.png"
+            imageAlt="Vintage curved CRT monitor screen with scanlines"
             className="md:col-span-1 lg:col-span-1"
           />
 
-          {/* Card 3: 1-column span on desktop (lg:col-span-1), 1 col on tablet (md:col-span-1) */}
+          {/* Card 3: 1-column span on desktop, with 04-card-freebeats.png */}
           <ContentCard
             badge="03"
             category="FREE RELEASES"

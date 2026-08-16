@@ -14,6 +14,11 @@
   --color-steel: #484848;
   --color-ash: #cecece;
 
+  /* Fonts */
+  --font-brand: var(--font-modak), cursive, sans-serif;
+  --font-body: var(--font-new-tegomin), serif;
+  --font-mono: var(--font-roboto-mono), monospace;
+
   /* Radius */
   --radius-pill: 1440px;
   --radius-card: 10px;
@@ -29,16 +34,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-weight: 400 !important; /* Strict 400 weight across entire site */
   box-shadow: none !important; /* Strict prohibition of box-shadows / glows */
   text-shadow: none !important;
-  filter: none;
 }
 
 html {
   background-color: var(--color-void-black);
   color: var(--color-pure-white);
-  font-size: 16px; /* Base 16px preserved */
+  font-size: 16px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,7 +50,7 @@ html {
 body {
   background-color: var(--color-void-black);
   color: var(--color-pure-white);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-new-tegomin), "New Tegomin", serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -93,10 +96,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-pill);
   color: var(--color-pure-white);
-  font-family: var(--font-oswald), ui-sans-serif, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 14px;
+  font-family: var(--font-modak), cursive, sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 15px;
   line-height: 1;
   padding: 10px 24px;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -118,10 +120,9 @@ body {
   border: 1px solid rgba(11, 11, 11, 0.4);
   border-radius: var(--radius-pill);
   color: var(--color-void-black);
-  font-family: var(--font-oswald), ui-sans-serif, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 14px;
+  font-family: var(--font-modak), cursive, sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 15px;
   line-height: 1;
   padding: 10px 24px;
   transition: border-color 0.2s ease, color 0.2s ease;

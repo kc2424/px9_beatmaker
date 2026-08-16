@@ -61,7 +61,7 @@ export default function HeroSection() {
         ref={textRef}
         className="relative z-20 max-w-[1400px] w-full mx-auto px-6 md:px-12 pb-16 md:pb-24 pt-32"
       >
-        <div className="max-w-2xl flex flex-col gap-5">
+        <div className="max-w-2xl flex flex-col gap-6">
           {/* Tagline Badge */}
           <div className="flex items-center gap-3">
             <span className="badge-pill">CHIPTUNE PRODUCER</span>
@@ -71,13 +71,13 @@ export default function HeroSection() {
             </span>
           </div>
 
-          {/* Main Wordmark H1 */}
-          <h1 className="font-brand text-6xl md:text-8xl lg:text-9xl text-white uppercase tracking-tight leading-none select-none">
+          {/* Main Wordmark H1 with Modak */}
+          <h1 className="font-brand text-7xl md:text-9xl text-white tracking-wider leading-none select-none">
             PX-9
           </h1>
 
-          {/* Philosophy Statement */}
-          <p className="font-brand text-lg md:text-2xl text-white/90 uppercase tracking-widest leading-snug max-w-xl border-l border-[#cc6437] pl-4">
+          {/* Philosophy Statement in Modak */}
+          <p className="font-brand text-xl md:text-3xl text-white/90 tracking-wide leading-snug max-w-xl border-l-2 border-[#cc6437] pl-4">
             8BIT IS NOT A LIMITATION. IT&apos;S A CHOICE.
           </p>
 
@@ -86,7 +86,10 @@ export default function HeroSection() {
             <a href="#about" className="ghost-pill-btn text-xs tracking-wider">
               EXPLORE WORLD
             </a>
-            <a href="#works" className="ghost-pill-btn text-xs tracking-wider border-white/20 text-white/70 hover:border-white/50">
+            <a
+              href="#works"
+              className="ghost-pill-btn text-xs tracking-wider border-white/20 text-white/70 hover:border-white/50"
+            >
               SELECTED WORK
             </a>
           </div>

@@ -5,6 +5,27 @@
 
 ---
 
+## Visual Summary
+
+| Hero Section (Alegreya Serif & Void Black) | About Section (CRT Scanline & New Tegomin) |
+|:---:|:---:|
+| ![Hero Section](docs/screenshots/01-hero.png) | ![About Section](docs/screenshots/02-about.png) |
+
+| Content Pillars (2:1:1 Asymmetric Grid) | Live Sound System (Hardware Performance) |
+|:---:|:---:|
+| ![Content Pillars](docs/screenshots/03-content-pillars.png) | ![Live Sound System](docs/screenshots/04-live-system.png) |
+
+| Selected Work (High-Contrast Bone Inversion) | Commissions & Contact (Studio Rack Ambient) |
+|:---:|:---:|
+| ![Selected Work](docs/screenshots/05-selected-work.png) | ![Contact Section](docs/screenshots/06-contact.png) |
+
+<p align="center">
+  <b>Mobile Ergonomics (Fixed Thumb-Zone CTA & 0px Horizontal Overflow)</b><br>
+  <img src="docs/screenshots/07-mobile.png" width="380" alt="Mobile Live Performance View">
+</p>
+
+---
+
 ## 概要
 
 PX-9 は、矩形波・三角波・ノイズという限られたレトロ音源の制約から楽曲を組み立て、現代のミキシングと BPM で再構築する架空のビートメイカーです。

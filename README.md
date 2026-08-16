@@ -3,6 +3,11 @@
 > **"8BIT IS NOT A LIMITATION. IT'S A CHOICE."**  
 > チップチューン出身のビートメイカー「PX-9（ピクセルナイン）」のポートフォリオ Web アプリケーション。
 
+🌐 **Live URL**: [https://px9beatmaker.vercel.app](https://px9beatmaker.vercel.app)
+
+> ⚠️ **Disclaimer / 注意事項**:  
+> 本サイトに登場するアーティスト「**PX-9（ピクセルナイン）**」は**架空のアーティスト（Virtual / Fictional Artist）**です。実在の人物・団体・レーベル・企業・ゲーム作品とは一切関係ありません。Web 制作ポートフォリオおよび技術実証用の架空作品です。
+
 ---
 
 ## Visual Summary
@@ -20,8 +25,8 @@
 | ![Selected Work](docs/screenshots/05-selected-work.png) | ![Contact Section](docs/screenshots/06-contact.png) |
 
 <p align="center">
-  <b>Mobile Ergonomics (Fixed Thumb-Zone CTA & 0px Horizontal Overflow)</b><br>
-  <img src="docs/screenshots/07-mobile.png" width="380" alt="Mobile Live Performance View">
+  <b>Mobile Hero View (Responsive Void Black & Ember Rust Typography)</b><br>
+  <img src="docs/screenshots/07-mobile-hero.png" width="360" alt="Mobile Hero View">
 </p>
 
 ---
@@ -69,22 +74,18 @@ PX-9 は、矩形波・三角波・ノイズという限られたレトロ音源
 
 ---
 
-## 技術スタック
+## 技術スタック & デプロイ
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animation**: [GSAP](https://greensock.com/gsap/) + [ScrollTrigger](https://greensock.com/scrolltrigger/)
-- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 - **Fonts**: [Google Fonts](https://fonts.google.com/) (`Alegreya`, `New Tegomin`, `Roboto Mono`)
 
 ---
 
 ## 開発・ビルド手順
-
-### 必要要件
-- Node.js 18.18.0 以上
-- npm
 
 ### 1. 依存関係のインストール
 ```bash
@@ -95,7 +96,6 @@ npm install
 ```bash
 npm run dev
 ```
-ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認します。
 
 ### 3. プロダクションビルド
 ```bash

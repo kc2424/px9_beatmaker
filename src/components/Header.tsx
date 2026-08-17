@@ -37,10 +37,10 @@ export default function Header() {
             PX-9
           </a>
 
-          {/* Right Pill: CONTACT */}
+          {/* Right Pill: CONTACT (Desktop only, hidden on mobile) */}
           <a
             href="#contact"
-            className="ghost-pill-btn text-xs tracking-wider"
+            className="ghost-pill-btn text-xs tracking-wider hidden md:inline-flex"
           >
             CONTACT
           </a>

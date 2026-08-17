@@ -10,18 +10,8 @@ async function main() {
     fs.mkdirSync(videosDir, { recursive: true });
   }
 
-  // Clear previous recordings
-  for (const f of fs.readdirSync(videosDir)) {
-    try {
-      fs.unlinkSync(path.join(videosDir, f));
-    } catch {}
-  }
-
-  console.log("Launching Chromium for sleek, rhythmic demo recording (15s total)...");
-  const browser = await chromium.launch({
-    headless: true,
-  });
-
+  console.log("Starting Playwright browser recording...");
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     viewport: { width: 1440, height: 900 },
     recordVideo: {
@@ -31,18 +21,17 @@ async function main() {
   });
 
   const page = await context.newPage();
-  const videoObj = page.video();
 
   console.log("Navigating to https://px9beatmaker.vercel.app ...");
   await page.goto("https://px9beatmaker.vercel.app", { waitUntil: "networkidle" });
 
-  // 1. Hero pause (1.8s) - show logo & amber rim light
-  console.log("1. Hero Section...");
-  await page.waitForTimeout(1800);
+  // 1. Hero showcase (2.0s)
+  console.log("1. Hero showcase...");
+  await page.waitForTimeout(2000);
 
-  // Smooth easeInOutQuad scroll function
+  // Smooth scroll helper
   async function smoothScroll(targetY, durationMs) {
-    const steps = 30;
+    const steps = 40;
     const stepTime = durationMs / steps;
     const startY = await page.evaluate(() => window.scrollY);
     const distance = targetY - startY;
@@ -61,32 +50,32 @@ async function main() {
 
   // 2. About Section
   console.log("2. About Section...");
-  await smoothScroll(760, 600);
-  await page.waitForTimeout(1200);
+  await smoothScroll(750, 700);
+  await page.waitForTimeout(1400);
 
   // 3. Content Pillars
   console.log("3. Content Pillars...");
-  await smoothScroll(1480, 600);
-  await page.waitForTimeout(1400);
+  await smoothScroll(1480, 700);
+  await page.waitForTimeout(1500);
 
   // 4. Live Sound System
   console.log("4. Live Sound System...");
-  await smoothScroll(2250, 600);
-  await page.waitForTimeout(1400);
+  await smoothScroll(2250, 700);
+  await page.waitForTimeout(1500);
 
   // 5. Selected Work (Bone Inversion)
   console.log("5. Selected Work...");
-  await smoothScroll(3050, 600);
-  await page.waitForTimeout(1400);
+  await smoothScroll(3050, 700);
+  await page.waitForTimeout(1500);
 
   // 6. Contact Section
   console.log("6. Contact Section...");
-  await smoothScroll(3900, 600);
-  await page.waitForTimeout(1200);
+  await smoothScroll(3900, 700);
+  await page.waitForTimeout(1500);
 
-  // 7. Fast smooth scroll back to top
+  // 7. Scroll back to top
   console.log("7. Fast scroll back to top...");
-  await smoothScroll(0, 700);
+  await smoothScroll(0, 900);
   await page.waitForTimeout(800);
 
   // 8. Open Menu Overlay
@@ -94,38 +83,38 @@ async function main() {
   const menuBtn = page.getByRole("button", { name: "MENU" });
   if (await menuBtn.isVisible()) {
     await menuBtn.click();
-    await page.waitForTimeout(1600);
+    await page.waitForTimeout(1800);
     const closeBtn = page.getByRole("button", { name: /CLOSE/i });
     if (await closeBtn.isVisible()) {
       await closeBtn.click();
-      await page.waitForTimeout(800);
+      await page.waitForTimeout(1000);
     }
   }
 
-  // Final settling buffer (ensures no cutoff)
-  await page.waitForTimeout(1200);
+  // 9. Extra settling buffer
+  console.log("9. Settling buffer...");
+  await page.waitForTimeout(1500);
 
-  console.log("Closing browser and flushing video stream...");
+  const video = page.video();
   await page.close();
   await context.close();
   await browser.close();
 
-  const savedVideoPath = await videoObj.path();
-  console.log(`Raw video saved to: ${savedVideoPath}`);
+  const webmPath = path.resolve("./videos/temp_record.webm");
+  await video.saveAs(webmPath);
+  console.log("WebM saved successfully:", webmPath);
 
-  const outputMp4 = path.resolve("./px9_demo.mp4");
+  const outMp4 = path.resolve("./px9_demo_clean.mp4");
   const downloadsMp4 = path.join(os.homedir(), "Downloads", "px9_demo.mp4");
 
-  console.log("Converting WebM to silky-smooth 60fps MP4 for X (Twitter)...");
-  // Convert with 60fps smoothing and high bitrate CRF 17
+  console.log("Converting WebM to high-quality H.264 MP4 with ffmpeg...");
   execSync(
-    `ffmpeg -y -i "${savedVideoPath}" -filter:v "fps=60" -c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p -movflags +faststart "${outputMp4}"`,
+    `ffmpeg -y -i "${webmPath}" -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p -movflags +faststart "${outMp4}"`,
     { stdio: "inherit" }
   );
 
-  fs.copyFileSync(outputMp4, downloadsMp4);
-
-  console.log(`\n🎉 COMPLETED! High quality video saved to:\n- Project: ${outputMp4}\n- Downloads: ${downloadsMp4}`);
+  fs.copyFileSync(outMp4, downloadsMp4);
+  console.log(`\n🎉 COMPLETED! High quality video saved to:\n- Project: ${outMp4}\n- Downloads: ${downloadsMp4}`);
 }
 
 main().catch(console.error);

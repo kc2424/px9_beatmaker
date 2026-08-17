@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import ASCIIWaves from "@/components/ASCIIWaves";
 
 export default function HeroSection() {
   const rimPulseRef = useRef<HTMLDivElement>(null);
@@ -50,6 +51,24 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0b] via-[#0b0b0b]/50 to-transparent hidden md:block" />
       </div>
 
+      {/* Interactive ASCII Wave Effect */}
+      <div className="absolute inset-0 z-10 opacity-60 mix-blend-screen pointer-events-auto">
+        <ASCIIWaves
+          characters=" .:-+*=%@#"
+          elementSize={14}
+          color="#cc6437"
+          background="transparent"
+          direction="left"
+          speed={22}
+          waveTension={6}
+          noiseScale={14}
+          intensity={12}
+          hasCursorInteraction={true}
+          interactionIntensity={22}
+          interactionRadius={200}
+        />
+      </div>
+
       {/* Subtle Ember Hairline Accent */}
       <div
         ref={rimPulseRef}
@@ -72,8 +91,8 @@ export default function HeroSection() {
             8BIT IS NOT A LIMITATION. IT&apos;S A CHOICE.
           </p>
 
-          {/* Minimal Quick Links */}
-          <div className="pt-4 flex items-center gap-4">
+          {/* Minimal Quick Links (Desktop only, hidden on mobile) */}
+          <div className="pt-4 hidden md:flex items-center gap-4">
             <a href="#about" className="ghost-pill-btn text-xs tracking-wider">
               EXPLORE WORLD
             </a>

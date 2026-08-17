@@ -66,108 +66,110 @@ body {
   outline-offset: 3px !important;
 }
 
-/* Hairline border utilities */
-.border-hairline-white {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-}
+@layer components {
+  /* Hairline border utilities */
+  .border-hairline-white {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
 
-.border-hairline-steel {
-  border: 1px solid var(--color-steel);
-}
+  .border-hairline-steel {
+    border: 1px solid var(--color-steel);
+  }
 
-.border-hairline-ash {
-  border: 1px solid var(--color-ash);
-}
+  .border-hairline-ash {
+    border: 1px solid var(--color-ash);
+  }
 
-.border-hairline-rust {
-  border: 1px solid var(--color-ember-rust);
-}
+  .border-hairline-rust {
+    border: 1px solid var(--color-ember-rust);
+  }
 
-.border-hairline-bone-dark {
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
+  .border-hairline-bone-dark {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
 
-/* Ghost Pill Button */
-.ghost-pill-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: var(--radius-pill);
-  color: var(--color-pure-white);
-  font-family: var(--font-alegreya), Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 14px;
-  line-height: 1;
-  padding: 10px 24px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
+  /* Ghost Pill Button */
+  .ghost-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-pill);
+    color: var(--color-pure-white);
+    font-family: var(--font-alegreya), Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 24px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
 
-.ghost-pill-btn:hover {
-  border-color: var(--color-ember-rust);
-  color: var(--color-pure-white);
-}
+  .ghost-pill-btn:hover {
+    border-color: var(--color-ember-rust);
+    color: var(--color-pure-white);
+  }
 
-/* Inversion Button for Bone Section */
-.ghost-pill-btn-dark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid rgba(11, 11, 11, 0.4);
-  border-radius: var(--radius-pill);
-  color: var(--color-void-black);
-  font-family: var(--font-alegreya), Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 14px;
-  line-height: 1;
-  padding: 10px 24px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
+  /* Inversion Button for Bone Section */
+  .ghost-pill-btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid rgba(11, 11, 11, 0.4);
+    border-radius: var(--radius-pill);
+    color: var(--color-void-black);
+    font-family: var(--font-alegreya), Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 24px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
 
-.ghost-pill-btn-dark:hover {
-  border-color: var(--color-ember-rust);
-  color: var(--color-void-black);
-}
+  .ghost-pill-btn-dark:hover {
+    border-color: var(--color-ember-rust);
+    color: var(--color-void-black);
+  }
 
-/* Badge Pill */
-.badge-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid var(--color-ash);
-  border-radius: var(--radius-pill);
-  color: var(--color-pure-white);
-  font-family: var(--font-roboto-mono), ui-monospace, monospace;
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  padding: 4px 12px;
-  text-transform: uppercase;
-}
+  /* Badge Pill */
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--color-ash);
+    border-radius: var(--radius-pill);
+    color: var(--color-pure-white);
+    font-family: var(--font-roboto-mono), ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    text-transform: uppercase;
+  }
 
-/* System Card */
-.system-card {
-  background-color: var(--color-charcoal-surface);
-  border-radius: var(--radius-card);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  position: relative;
-  overflow: hidden;
-}
+  /* System Card */
+  .system-card {
+    background-color: var(--color-charcoal-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
 
-/* News Ticker Bar */
-.news-ticker-bar {
-  background-color: var(--color-abyss);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: var(--font-roboto-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  /* News Ticker Bar */
+  .news-ticker-bar {
+    background-color: var(--color-abyss);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: var(--font-roboto-mono), ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 }
